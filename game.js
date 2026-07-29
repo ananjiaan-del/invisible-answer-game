@@ -400,25 +400,25 @@ const clueData = {
   log: {
     kicker: "CLUE 01",
     title: "固定的星期三",
-    image: "ch3-clue-log-v1.png",
+    image: "assets/ch3-clue-log-v1.png",
     body: `<p>班級教學日誌裡，最近幾個星期三從第一節到最後一節，都重複記著同一個名字。</p><blockquote>方哲宇（全日未到）</blockquote><p>不是只缺第一節。每個星期三，他一整天都沒有出現在教室。前幾次被標成「曠課」，最近兩週的導師簽名旁卻多了一行小字：「已請假？」後面還留著問號。</p>`
   },
   desk: {
     kicker: "CLUE 02",
     title: "趕不上的時間",
-    image: "ch3-clue-desk-v1.png",
+    image: "assets/ch3-clue-desk-v1.png",
     body: `<p>透明桌墊上留著很深的原子筆刻痕。同一組時間被重複寫過很多次。</p><blockquote>07:20－08:35<br>趕不上</blockquote><p>這組時間或許能解釋他早上為什麼趕不上，卻還不能解釋他為什麼一整天都沒到。</p>`
   },
   bus: {
     kicker: "CLUE 03",
     title: "雜物堆裡的公車表",
-    image: "ch3-clue-bus-v1.png",
+    image: "assets/ch3-clue-bus-v1.png",
     body: `<p>這堆東西放在十四號座位旁，好像是方哲宇的。透明夾鏈袋裡有一張折舊的公車時刻表，「綠12」路線被畫過，其中一班又被紅筆圈起來。</p><blockquote>山區起站 07:20<br>市區醫院 07:50<br>山嶺高中 08:35</blockquote>`
   },
   notice: {
     kicker: "CLUE 04",
     title: "沒有完整簽名的請假單",
-    image: "ch3-clue-unsigned-leave-form-v1.png",
+    image: "assets/ch3-clue-unsigned-leave-form-v1.png",
     body: `<p>公告欄下方的班級資料夾裡，夾著幾張方哲宇的請假單，日期都是星期三。</p><p>請假原因只寫著「家中有事」，監護人簽名欄卻是空白的。這或許就是老師一直無法確認他是否真的請假的原因。</p>`
   }
 };
@@ -845,7 +845,7 @@ document.querySelectorAll("[data-observe]").forEach((button) => {
   button.addEventListener("click", () => {
     const [title, body] = observationData[button.dataset.observe];
     activeClue = null;
-    cluePhoto.style.backgroundImage = 'url("ch3-classroom-sunset-v1.png")';
+    cluePhoto.style.backgroundImage = 'url("assets/ch3-classroom-sunset-v1.png")';
     clueKicker.textContent = "OBSERVATION";
     clueTitle.textContent = title;
     clueBody.innerHTML = `<p>${body}</p>`;
