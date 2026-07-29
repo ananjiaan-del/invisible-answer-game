@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101817" />
+  <title>看不見的答案｜第一章</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="game" class="game" aria-live="polite">
+    <div id="scene" class="scene scene--arrival" aria-label="偏鄉學校校園"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <section id="gameCover" class="game-cover">
+      <div class="cover-title">
+        <small>星築美少女自創沉浸式校園推理遊戲</small>
+        <h1>看不見的答案</h1>
+        <p>有些人不是突然離開，只是很久沒有人問：為什麼？</p>
+      </div>
+      <div class="chapter-select" aria-label="選擇章節">
+        <button class="chapter-card" data-start-chapter="1" type="button">
+          <span>CHAPTER 01</span><strong>傳說的開端</strong><em>轉學第一天・公布欄的舊傳單</em>
+        </button>
+        <button class="chapter-card" data-start-chapter="2" type="button">
+          <span>CHAPTER 02</span><strong>推理研究社</strong><em>向晚與未結的第七件案子</em>
+        </button>
+        <button class="chapter-card" data-start-chapter="3" type="button">
+          <span>CHAPTER 03</span><strong>總是缺席的那一天</strong><em>放學後・留在教室的真意</em>
+        </button>
+      </div>
+      <button id="startGame" class="cover-start" type="button">開始遊戲</button>
+    </section>
+    <header class="topbar">
+      <div class="chapter"><span id="chapterNumber">CHAPTER 01</span><strong id="chapterTitle">傳說的開端</strong></div>
+      <button id="previousPage" class="previous-page hidden" type="button" aria-label="回到上一頁">‹ 上一頁</button>
+    </header>
+
+    <section id="dialogue" class="dialogue">
+      <div id="speaker" class="speaker speaker--hidden"></div>
+      <p id="line" class="line"></p>
+      <button id="continue" class="continue" type="button">繼續 <span>›</span></button>
+    </section>
+
+    <section id="walkPrompt" class="walk-prompt hidden">
+      <span>沿著走廊繼續前進</span>
+      <button id="walkButton" type="button" aria-label="沿著走廊前進">↑</button>
+    </section>
+
+    <section id="corridorExplore" class="corridor-explore hidden" aria-label="沿著走廊探索">
+      <p id="exploreLabel" class="explore-label">剛走出校長室</p>
+      <button id="exploreAction" class="hotspot hotspot--focus" type="button"><span>看看外面</span></button>
+      <div id="observation" class="observation hidden">
+        <p id="observationText"></p>
+        <button id="closeObservation" type="button">沿著走廊前進</button>
+      </div>
+    </section>
+
+    <section id="boardPuzzle" class="board-puzzle hidden" aria-label="公布欄探索">
+      <div class="mystery-paper" aria-hidden="true"></div>
+      <button class="cover cover--one" data-cover="1" type="button" aria-label="查看籃球社傳單"><span>籃球社</span></button>
+      <button class="cover cover--two" data-cover="2" type="button" aria-label="查看吉他社傳單"><span>吉他社</span></button>
+      <button class="cover cover--three" data-cover="3" type="button" aria-label="查看熱舞社傳單"><span>熱舞社</span></button>
+      <button id="inspectPaper" class="inspect-paper hidden" type="button">仔細查看這張紙</button>
+    </section>
+
+    <section id="detailPanel" class="flyer-view hidden">
+      <button id="closeDetails" class="close-details" type="button" aria-label="關閉細節">×</button>
+      <div class="flyer-photo" role="img" aria-label="泛黃破損的推理研究社傳單，上面寫著你記得上一個消失的人是誰嗎"></div>
+      <p class="observe-note">紙張右下角，似乎還留著一行很淡的字……</p>
+      <button id="finishInspect" class="primary" type="button">放回傳單</button>
+    </section>
+
+    <section id="choices" class="choices hidden" aria-label="選擇你的行動"></section>
+
+    <div id="ending" class="ending hidden">
+      <p>陌生的聲音近得有些突然。</p>
+      <h2>？？？</h2>
+      <blockquote>「你在看那張海報？」</blockquote>
+      <span>第一章・下一段待續</span>
+      <button id="nextChapter" class="ending-primary" type="button">繼續下一章</button>
+      <button id="restart" type="button">重新體驗</button>
+    </div>
+
+    <section id="evidencePanel" class="evidence-panel hidden" aria-label="案件證物">
+      <div id="evidenceCard" class="evidence-card">
+        <small id="evidenceKicker">推理研究社</small>
+        <h2 id="evidenceTitle">未結案件・第七件</h2>
+        <p id="evidenceBody">CONFIDENTIAL</p>
+      </div>
+      <button id="closeEvidence" class="primary" type="button">翻開卷宗</button>
+    </section>
+
+    <section id="locationUnlock" class="location-unlock hidden" aria-label="解鎖新地點">
+      <small>NEW LOCATION</small>
+      <span>解鎖地點</span>
+      <h2>推理研究社・社辦</h2>
+      <p>舊校舍二樓最裡面，那扇平常不太有人打開的門。</p>
+      <button id="enterClubroom" type="button">前往社辦</button>
+    </section>
+
+    <section id="caseEnding" class="case-ending hidden">
+      <small>CASE 01</small>
+      <h2>總是缺席的那一天</h2>
+      <p>調查即將展開</p>
+      <button id="continueCase" class="ending-primary" type="button">開始調查</button>
+      <button id="restartCase" type="button">重新體驗</button>
+    </section>
+
+    <section id="classroomInvestigation" class="classroom-investigation hidden" aria-label="調查方哲宇留下的線索">
+      <p class="map-instruction">在教室各處逛逛吧！</p>
+      <div class="classroom-map">
+        <button class="map-object map-blackboard" data-observe="blackboard" type="button">黑板</button>
+        <button class="map-object map-podium" data-clue="log" type="button">講台</button>
+        <div class="map-seats" aria-label="五乘三座位配置">
+          <button data-observe="seat" type="button">01</button><button data-observe="seat" type="button">02</button><button data-observe="seat" type="button">03</button>
+          <button data-observe="seat" type="button">04</button><button data-observe="seat" type="button">05</button><button data-observe="seat" type="button">06</button>
+          <button data-observe="seat" type="button">07</button><button data-observe="playerSeat" type="button">08</button><button data-observe="seat" type="button">09</button>
+          <button data-observe="seat" type="button">10</button><button data-observe="seat" type="button">11</button><button data-observe="seat" type="button">12</button>
+          <button data-observe="seat" type="button">13</button><button class="fang-seat" data-clue="desk" type="button">14</button><button data-observe="seat" type="button">15</button>
+        </div>
+        <button class="map-object map-bag" data-clue="bus" type="button">雜物堆</button>
+        <button class="map-object map-board" data-clue="notice" type="button">公告欄</button>
+        <div class="map-door">教室門</div>
+      </div>
+      <span id="clueProgress" class="visually-hidden">已發現 0／4</span>
+    </section>
+
+    <section id="cluePanel" class="clue-panel hidden" aria-label="線索內容">
+      <div id="cluePhoto" class="clue-photo"></div>
+      <div class="clue-copy"><small id="clueKicker">CLUE 01</small><h2 id="clueTitle"></h2><div id="clueBody"></div></div>
+      <button id="collectClue" type="button">收下線索</button>
+    </section>
+
+    <section id="deductionPanel" class="deduction-panel hidden">
+      <small>CLUE PUZZLE</small>
+      <h2>把線索放在一起想</h2>
+      <p>日誌顯示他星期三整天未到；桌墊記著時間，雜物裡有經過醫院的公車表，公告欄裡的請假單又沒有完整簽名。哪個推論目前最合理？</p>
+      <div id="deductionChoices" class="deduction-choices">
+        <button data-deduction="late" type="button">他只是第一節遲到，之後有回到學校</button>
+        <button data-deduction="route" type="button">他星期三早上搭了經過醫院的綠12，但當天仍未到校</button>
+        <button data-deduction="sleep" type="button">他固定睡過頭，公車表只是剛好放在桌邊</button>
+      </div>
+      <p id="deductionFeedback" class="deduction-feedback">選一個最能同時解釋三項線索的推論。</p>
+      <button id="finishDeduction" type="button">確認選擇</button>
+    </section>
+
+    <section id="chapter3Ending" class="case-ending hidden">
+      <small>CASE 01・CLUE FOUND</small>
+      <h2>住址與公車路線的矛盾</h2>
+      <p>下一個調查地點：方哲宇家附近</p>
+      <button id="restartChapter3" type="button">回到遊戲封面</button>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
