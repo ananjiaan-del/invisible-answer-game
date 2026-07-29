@@ -14,34 +14,34 @@ button { font: inherit; }
 .game { position: relative; width: min(100vw, 56.25svh); height: 100svh; min-height: 100svh; margin: 0 auto; overflow: hidden; color: var(--ink); background: #111; box-shadow: 0 0 90px rgba(0,0,0,.8); }
 .scene { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity .7s ease, transform 1.4s ease; }
 .scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,10,.08) 30%, rgba(6,10,10,.88) 100%); }
-.scene--arrival { background-image: url("assets/school-arrival.png"); background-position: 55% center; }
-.scene--office { background-image: url("assets/principal-office-portrait-v3.png"); }
-.scene--phone { background-image: url("assets/principal-phone-portrait-v3.png"); animation: cut .55s ease both; }
-.scene--phone-close { background-image: url("assets/phone-ringing-v1.png"); animation: cut .55s ease both; }
-.scene--whisper { background-image: url("assets/principal-whisper-phone-v2.png"); animation: cut .55s ease both; }
-.scene--empty-office { background-image: url("assets/principal-office-empty-v1.png"); animation: cut .55s ease both; }
-.scene--corridor { background-image: url("assets/school-corridor.png"); animation: arrive 1.2s ease both; }
-.scene--outside { background-image: url("assets/corridor-window-view-v1.png"); animation: arrive 1.2s ease both; }
-.scene--classroom { background-image: url("assets/classroom-interior-v1.png"); animation: arrive 1.2s ease both; }
-.scene--board { background-image: url("assets/bulletin-board.png"); background-position: center; }
-.scene--xiangwan { background-image: url("assets/xiangwan-corridor-v1.png"); background-position: center; animation: cut .55s ease both; }
-.scene--xiangwan-front { background-image: url("assets/xiangwan-front-v2.png"); background-position: center; animation: cut .55s ease both; }
-.scene--clubroom { background-image: url("assets/xiangwan-clubroom-v1.png"); background-position: center; animation: arrive 1s ease both; }
-.scene--clubroom-entry { background-image: url("assets/clubroom-entry-v2.png"); background-position: center; animation: arrive 1s ease both; }
-.scene--xiangwan-intro { background-image: url("assets/xiangwan-intro-smile-v1.png"); background-position: center; animation: cut .55s ease both; }
-.scene--xiangwan-explain { background-image: url("assets/xiangwan-explain-v2.png"); background-position: center; animation: cut .55s ease both; }
-.scene--xiangwan-folder { background-image: url("assets/xiangwan-folder-v2.png"); background-position: center; animation: cut .55s ease both; }
-.scene--xiangwan-case-explain { background-image: url("assets/xiangwan-case-explain-v3.png"); background-position: center; animation: cut .55s ease both; }
-.scene--xiangwan-look { background-image: url("assets/xiangwan-explain-v2.png"); background-position: center; animation: cut .55s ease both; }
-.scene--caseboard { background-image: url("assets/caseboard-six-v1.png"); background-position: center; animation: cut .55s ease both; }
-.scene--ch3-classroom { background-image: url("assets/ch3-classroom-sunset-v1.png"); background-position: center; animation: arrive .9s ease both; }
-.scene--ch3-afternoon { background-image: url("assets/ch3-afternoon-classmates-v1.png"); background-position: center; animation: arrive .9s ease both; }
-.scene--ch3-footsteps { background-image: url("assets/ch3-footsteps-closeup-v1.png"); background-position: center bottom; animation: cut .55s ease both; }
-.scene--ch3-teacher { background-image: url("assets/ch3-teacher-door-v1.png"); background-position: center; animation: cut .55s ease both; }
-.scene--ch3-door-close { background-image: url("assets/ch3-door-closing-v1.png"); background-position: center; animation: cut .55s ease both; }
-.scene--ch3-xiangwan { background-image: url("assets/ch3-xiangwan-drinks-v1.png"); background-position: center; animation: cut .55s ease both; }
-.scene--ch3-xiangwan-set-drink { background-image: url("assets/ch3-xiangwan-set-drink-v1.png"); background-position: center bottom; animation: cut .55s ease both; }
-.scene--ch3-xiangwan-thoughtful { background-image: url("assets/ch3-xiangwan-thoughtful-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--arrival { background-image: url("school-arrival.png"); background-position: 55% center; }
+.scene--office { background-image: url("principal-office-portrait-v3.png"); }
+.scene--phone { background-image: url("principal-phone-portrait-v3.png"); animation: cut .55s ease both; }
+.scene--phone-close { background-image: url("phone-ringing-v1.png"); animation: cut .55s ease both; }
+.scene--whisper { background-image: url("principal-whisper-phone-v2.png"); animation: cut .55s ease both; }
+.scene--empty-office { background-image: url("principal-office-empty-v1.png"); animation: cut .55s ease both; }
+.scene--corridor { background-image: url("school-corridor.png"); animation: arrive 1.2s ease both; }
+.scene--outside { background-image: url("corridor-window-view-v1.png"); animation: arrive 1.2s ease both; }
+.scene--classroom { background-image: url("classroom-interior-v1.png"); animation: arrive 1.2s ease both; }
+.scene--board { background-image: url("bulletin-board.png"); background-position: center; }
+.scene--xiangwan { background-image: url("xiangwan-corridor-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--xiangwan-front { background-image: url("xiangwan-front-v2.png"); background-position: center; animation: cut .55s ease both; }
+.scene--clubroom { background-image: url("xiangwan-clubroom-v1.png"); background-position: center; animation: arrive 1s ease both; }
+.scene--clubroom-entry { background-image: url("clubroom-entry-v2.png"); background-position: center; animation: arrive 1s ease both; }
+.scene--xiangwan-intro { background-image: url("xiangwan-intro-smile-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--xiangwan-explain { background-image: url("xiangwan-explain-v2.png"); background-position: center; animation: cut .55s ease both; }
+.scene--xiangwan-folder { background-image: url("xiangwan-folder-v2.png"); background-position: center; animation: cut .55s ease both; }
+.scene--xiangwan-case-explain { background-image: url("xiangwan-case-explain-v3.png"); background-position: center; animation: cut .55s ease both; }
+.scene--xiangwan-look { background-image: url("xiangwan-explain-v2.png"); background-position: center; animation: cut .55s ease both; }
+.scene--caseboard { background-image: url("caseboard-six-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--ch3-classroom { background-image: url("ch3-classroom-sunset-v1.png"); background-position: center; animation: arrive .9s ease both; }
+.scene--ch3-afternoon { background-image: url("ch3-afternoon-classmates-v1.png"); background-position: center; animation: arrive .9s ease both; }
+.scene--ch3-footsteps { background-image: url("ch3-footsteps-closeup-v1.png"); background-position: center bottom; animation: cut .55s ease both; }
+.scene--ch3-teacher { background-image: url("ch3-teacher-door-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--ch3-door-close { background-image: url("ch3-door-closing-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--ch3-xiangwan { background-image: url("ch3-xiangwan-drinks-v1.png"); background-position: center; animation: cut .55s ease both; }
+.scene--ch3-xiangwan-set-drink { background-image: url("ch3-xiangwan-set-drink-v1.png"); background-position: center bottom; animation: cut .55s ease both; }
+.scene--ch3-xiangwan-thoughtful { background-image: url("ch3-xiangwan-thoughtful-v1.png"); background-position: center; animation: cut .55s ease both; }
 @keyframes arrive { from { transform: scale(1.04); opacity: .6; } to { transform: scale(1); opacity: 1; } }
 @keyframes cut { from { opacity: .25; } to { opacity: 1; } }
 
@@ -49,7 +49,7 @@ button { font: inherit; }
 
 .game-cover { position: absolute; z-index: 30; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 22px; padding: 8vh 22px 5vh; background:
   linear-gradient(180deg, rgba(3,8,8,.12) 10%, rgba(4,10,10,.72) 51%, #07100f 100%),
-  url("assets/school-arrival.png") 55% center/cover no-repeat; }
+  url("school-arrival.png") 55% center/cover no-repeat; }
 .cover-title small { color: var(--accent); font-size: 10px; letter-spacing: .28em; }
 .cover-title h1 { margin: 9px 0 8px; font: 700 clamp(38px,7svh,56px)/1.18 "Noto Serif TC",serif; letter-spacing: .12em; text-shadow: 0 8px 25px #000; }
 .cover-title p { max-width: 330px; margin: 0; color: #d4d8d2; font: 600 13px/1.8 "Noto Serif TC",serif; }
@@ -94,17 +94,17 @@ button { font: inherit; }
 .observation button { display: block; margin-left: auto; padding: 8px 12px; border: 1px solid rgba(255,255,255,.28); color: #fff; background: transparent; cursor: pointer; font-size: 12px; }
 
 .board-puzzle { position: absolute; z-index: 7; inset: 0; }
-.mystery-paper { position: absolute; left: 8%; top: 23%; width: 84%; min-height: 52vh; transform: rotate(-1deg); background: url("assets/detective-flyer-v4.png") center/contain no-repeat; filter: drop-shadow(0 14px 18px rgba(0,0,0,.4)); }
+.mystery-paper { position: absolute; left: 8%; top: 23%; width: 84%; min-height: 52vh; transform: rotate(-1deg); background: url("detective-flyer-v4.png") center/contain no-repeat; filter: drop-shadow(0 14px 18px rgba(0,0,0,.4)); }
 .cover { position: absolute; z-index: 2; width: 68%; min-height: 43vh; padding: 0; border: 0; color: transparent; background-color: transparent; background-position: center; background-size: contain; background-repeat: no-repeat; filter: drop-shadow(0 12px 12px rgba(0,0,0,.45)); cursor: grab; transition: transform .65s cubic-bezier(.2,.8,.2,1), opacity .55s; }
 .cover span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.cover--one { left: 2%; top: 30%; transform: rotate(5deg); background-image: url("assets/basketball-card-v3.png"); }
-.cover--two { left: 31%; top: 36%; transform: rotate(-5deg); background-image: url("assets/guitar-card-v3.png"); }
-.cover--three { left: 16%; top: 21%; transform: rotate(1deg); background-image: url("assets/dance-card-v3.png"); }
+.cover--one { left: 2%; top: 30%; transform: rotate(5deg); background-image: url("basketball-card-v3.png"); }
+.cover--two { left: 31%; top: 36%; transform: rotate(-5deg); background-image: url("guitar-card-v3.png"); }
+.cover--three { left: 16%; top: 21%; transform: rotate(1deg); background-image: url("dance-card-v3.png"); }
 .cover.removed { pointer-events: none; opacity: 0; transform: translate(70vw, -25vh) rotate(24deg); }
 .inspect-paper { position: absolute; z-index: 4; left: 50%; bottom: 8vh; transform: translateX(-50%); padding: 15px 25px; border: 1px solid var(--accent); color: #fff; background: rgba(11,19,18,.92); cursor: pointer; }
 
 .flyer-view { position: absolute; z-index: 10; inset: 0; display: grid; place-items: center; padding: 3vh 4vw 9vh; background: rgba(5,9,9,.94); box-shadow: 0 30px 100px #000; }
-.flyer-photo { width: 96%; height: 76vh; background: url("assets/detective-flyer-v4.png") center/contain no-repeat; filter: drop-shadow(0 24px 30px rgba(0,0,0,.58)); animation: flyerIn .8s cubic-bezier(.2,.8,.2,1) both; }
+.flyer-photo { width: 96%; height: 76vh; background: url("detective-flyer-v4.png") center/contain no-repeat; filter: drop-shadow(0 24px 30px rgba(0,0,0,.58)); animation: flyerIn .8s cubic-bezier(.2,.8,.2,1) both; }
 @keyframes flyerIn { from { opacity: 0; transform: scale(.82) rotate(-2deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
 .close-details { position: absolute; right: 24px; top: 18px; border: 0; background: none; color: #3b3328; font-size: 30px; cursor: pointer; }
 .flyer-view .close-details { color: #e8e4d8; }
